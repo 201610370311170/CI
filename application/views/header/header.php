@@ -99,7 +99,7 @@
                         <img class="avatar user-thumb" src="<?php echo base_url('assets/images/author/avatar.png') ?>" alt="avatar">
                         <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Admin<i class="fa fa-angle-down"></i></h4>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="<?php echo base_url('login/logout') ?>">Logout</a>
+                            <a class="dropdown-item" href="<?php echo base_url('landing_page/logout') ?>"><i class="ti-power-off"></i>&nbsp Logout</a>
                         </div>
                     </div>
                 </div>
