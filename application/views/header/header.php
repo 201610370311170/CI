@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/owl.carousel.min.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/slicknav.min.css') ?>">
     <!-- amchart css -->
-    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
     <!-- others css -->
     <link rel="stylesheet" href="<?php echo base_url('assets/css/typography.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/default-css.css') ?>">
@@ -44,7 +43,7 @@
         <div class="sidebar-menu">
             <div class="sidebar-header">
                 <div class="logo">
-                    <a href="index.html"><img src="<?php echo base_url('assets/images/icon/logo.png') ?>" alt="logo"></a>
+                    <a href="<?php echo base_url('/') ?>"><img src="<?php echo base_url('assets/images/icon/logo.png') ?>" alt="logo"></a>
                 </div>
             </div>
             <div class="main-menu">
@@ -62,7 +61,7 @@
                                 <a href="<?php echo base_url('pegawai') ?>"><i class="ti-user"></i>&nbsp Kelola Data</a>
                             </li>
                             <li class="">
-                                <a href="#"><i class="ti-dashboard"></i></span>&nbsp Menu 2</a>
+                                <a href="<?php echo base_url('absensi') ?>"><i class="ti-check-box"></i></span>&nbsp Absensi</a>
                             </li>
                             <li class="">
                                 <a href="#"><i class="ti-dashboard"></i></span>&nbsp Menu 3</a>

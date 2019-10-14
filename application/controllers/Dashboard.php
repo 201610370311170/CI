@@ -11,7 +11,7 @@ class Dashboard extends CI_Controller
     parent::__construct();
 
     if (!$this->session->userdata('staff')) // Jika tidak ada
-      redirect('login'); // Redirect ke halaman login
+      redirect('landing_page'); // Redirect ke halaman login
 
   }
 
@@ -21,16 +21,6 @@ class Dashboard extends CI_Controller
     $this->load->view('dashboard');
     $this->load->view('footer/footer');
   }
-
-
-  // public function pegawai()
-  // {
-  //   $this->load->view('header/header');
-  //   $this->load->view('pegawai');
-  //   $this->load->view('footer/footer');
-  // }
-
-
 }
 
 

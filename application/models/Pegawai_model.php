@@ -24,7 +24,6 @@ class Pegawai_model extends CI_Model
 
   function register($data)
   {
-
     $this->load->database();
     $this->db->insert('pegawai', $data);
   }

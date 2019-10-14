@@ -46,7 +46,7 @@
 
             <div class="container-fluid">
                 <div class="d-flex align-items-center">
-                    <div class="site-logo mr-auto w-25"><a href="index.html">PT. Bercocok Tanam</a></div>
+                    <div class="site-logo mr-auto w-25"><a href="<?php echo base_url('/') ?>">PT. Bercocok Tanam</a></div>
 
                     <div class="ml-auto w-25">
                         <nav class="site-navigation position-relative text-right" role="navigation">
