@@ -74,8 +74,10 @@
                                 </div>
 
                                 <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="500">
+
                                     <form action="<?php echo base_url('landing_page/login') ?>" method="post" class="form-box">
                                         <h3 class="h4 text-black mb-4">Masuk</h3>
+                                        <?php echo $this->session->flashdata('danger'); ?>
                                         <div class="form-group">
                                             <input type="text" class="form-control" placeholder="Username" name="username">
                                         </div>

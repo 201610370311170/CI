@@ -24,6 +24,9 @@
     <!-- JS -->
     <script src="<?php echo base_url('assets/js/jquery_3-4.js') ?>"></script>
 
+    <!-- dataTables -->
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/dataTables/jquery.dataTables.min.css') ?>">
+    <script src="<?php echo base_url('assets/js/dataTables/jquery.dataTables.min.js') ?>"></script>
 
 </head>
 
@@ -64,7 +67,7 @@
                                 <a href="<?php echo base_url('absensi') ?>"><i class="ti-check-box"></i></span>&nbsp Absensi</a>
                             </li>
                             <li class="">
-                                <a href="#"><i class="ti-dashboard"></i></span>&nbsp Menu 3</a>
+                                <a href="<?php echo base_url('gaji') ?>"><i class="ti-dashboard"></i></span>&nbsp Gaji</a>
                             </li>
                         </ul>
                     </nav>

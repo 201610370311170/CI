@@ -36,7 +36,10 @@ class Landing_page extends CI_Controller
     }
     //Jika incorrect
     else {
-      redirect('login');
+      $this->session->set_flashdata('danger', '<div class="alert alert-danger" role="alert">
+					Username atau Password salah!
+					</div>');
+      redirect('landing_page');
     }
   }
 
