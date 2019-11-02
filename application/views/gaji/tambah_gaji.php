@@ -36,14 +36,17 @@
                              </datalist>
                          </div>
                          <div class="form-group">
+                             <label>Golongan</label>
+                             <select name="golongan" class="form-control" style="padding : 5px;" required>
+                                 <option value=""></option>
+                                 <option value="1">Golongan 1 Staff</option>
+                                 <option value="2">Golongan 2 Karyawan</option>
+                             </select>
+                         </div>
+                         <div class="form-group">
                              <label>Bulan</label>
                              <input type="month" name="Bulan" class="form-control" required />
                          </div>
-                         <div class="form-group">
-                             <label>Kehadiran ( Hari )</label>
-                             <input type="number" min=0 max=30 class="form-control" name="jumlah_kehadiran" required>
-                         </div>
-
                          <div class="form-group">
                              <label>Mencapai Target</label><br>
                              <input required type="radio" name="capaian_target" value="Tercapai">&nbsp Tercapai &nbsp

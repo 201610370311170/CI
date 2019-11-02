@@ -37,10 +37,22 @@ class Gaji_model extends CI_Model
 
   // ------------------------------------------------------------------------
 
+  function getData()
+  {
+    $data = $this->db->query("select * from gaji_pegawai");
+    return $data->result_array();
+  }
+
   function register($data)
   {
     $this->load->database();
     $this->db->insert('gaji_pegawai', $data);
+  }
+
+  function delete_data($table, $id)
+  {
+    $this->db->where('id_gaji', $id);
+    $this->db->delete($table);
   }
 }
 

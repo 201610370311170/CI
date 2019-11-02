@@ -46,6 +46,12 @@ class Pegawai_model extends CI_Model
     return $update;
   }
 
+  function getNama($id_pegawai)
+  {
+    $data = $this->db->query("SELECT nama_pegawai from pegawai where id_pegawai = '$id_pegawai'");
+    return $data->result_array();
+  }
+
 
   // ------------------------------------------------------------------------
 

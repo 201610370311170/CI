@@ -49,6 +49,15 @@ class Absensi_model extends CI_Model
     return $data->result_array();
   }
 
+
+  public function hitung_kehadiran($id_pegawai, $tanggal_awal, $tanggal_akhir)
+  {
+    $data = $this->db->query("SELECT COUNT(kehadiran) from absensi where id_pegawai = '$id_pegawai' and tanggal >= '$tanggal_awal' and  tanggal <= '$tanggal_akhir'");
+
+    return $data->result_array();
+  }
+
+
   // ------------------------------------------------------------------------
 
 }
