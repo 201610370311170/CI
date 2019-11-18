@@ -3,6 +3,16 @@
 class Hitung_gaji
 {
 
+    //Agar bisa menggunakan fungsi database
+    function __construct()
+    {
+        //$CI->load->database();
+        //$this->load->library('database');
+        $this->CI = &get_instance();
+        $this->CI->load->database();
+    }
+
+
     public function index()
     { }
 
@@ -53,5 +63,16 @@ class Hitung_gaji
             default:
                 echo "Silahkan tentukan golongan Karyawan";
         }
+    }
+
+
+    //Coba - coba komponenn
+    public function tampilkanData()
+    {
+        $CI = &get_instance();
+        $query  =   $CI->db->get('pegawai');
+        $query2 =   $CI->db->query("select * from pegawai where id_pegawai = 1");
+        // $data = $this->db->query("select * from pegawai");
+        return $query2->result();
     }
 }

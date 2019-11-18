@@ -24,31 +24,27 @@ class Landing_page extends CI_Controller
   public function login()
   {
     $this->load->library('session');
+
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $data = $this->Users_model->login($username, $password);
 
-    //Jika username dan password benar
-    if ($data) {
-      $this->session->set_userdata('staff', $data);
-      redirect('dashboard');
-    }
-    //Jika incorrect
-    else {
-      $this->session->set_flashdata('danger', '<div class="alert alert-danger" role="alert">
-					Username atau Password salah!
-					</div>');
-      redirect('landing_page');
-    }
+    //Library Login
+    $page_berhasil  = 'dashboard';
+    $page_gagal     = 'landing_page';
+    $userdata       = 'staff';
+
+    $this->load->library('Login');
+    $this->login->masuk($username, $password, $page_berhasil, $page_gagal, $userdata);
   }
 
   public function logout()
   {
-    //load session library
-    $this->load->library('session');
-    $this->session->unset_userdata('staff');
-    redirect('/');
+    //Library Login
+    $page_gagal   = 'landing_page';
+    $userdata     = 'staff';
+    $this->load->library('Login');
+    $this->login->keluar($page_gagal, $userdata);
   }
 }
 

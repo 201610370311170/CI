@@ -169,6 +169,20 @@ class Gaji extends CI_Controller
     $this->load->view('gaji/detail_page', $data);
     $this->load->view('footer/footer');
   }
+
+  function coba()
+  {
+    $this->load->library('Hitung_gaji');
+    $data = $this->hitung_gaji->tampilkanData();
+
+    echo "<pre>";
+    print_r($data);
+    echo "</pre>";
+
+
+    $API = $this->hitung_gaji->hitung(20, "Tercapai", 1);
+    echo json_encode($API);
+  }
 }
 
 
